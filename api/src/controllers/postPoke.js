@@ -4,7 +4,7 @@ const { Pokemon, Type } = require('../db.js');
 const postPoke = async (req,res) => {
 try {
  
-  const { name, imagen, vida, ataque, defensa, velocidad, altura, peso, type } = req.body;
+  const { name, imagen, vida, ataque, defensa, velocidad, altura, peso, types } = req.body;
 
    
    const newPokemon = await Pokemon.create ({
@@ -15,14 +15,15 @@ try {
     defensa,
     velocidad,
     altura,
-    peso
+    peso,
+    isCreated: true
    })
 
 
-   const typesToAdd = await Type.findOne({ where: { name: type } });
+   const typesToAdd = await Promise.all(types.map(async (type) => await Type.findOne({ where: { name: type } })));
    
 
-   await newPokemon.addTypes([typesToAdd]);
+   await newPokemon.addTypes(typesToAdd);
        
 
 return res.status(200).send(newPokemon)

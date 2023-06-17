@@ -1,8 +1,12 @@
+const axios = require('axios')
+
 const getPokeByName = async (req, res) => {
     console.log(req.query);
     try {
-        const { name } = req.query;
-        const { data } = await axios.get(`${URL}/${name}`)
+        const url = 'https://pokeapi.co/api/v2/pokemon'
+        const { name } = req.params;
+        const nombreMinusculas = name.toLowerCase();
+        const { data } = await axios.get(`${url}/${nombreMinusculas}`)
 
         if (!data.name) throw new Error(`Pokemon: ${name} Not found`)
 
@@ -23,7 +27,7 @@ const getPokeByName = async (req, res) => {
 
 
     } catch (error) {
-        error.message.includes('ID')
+        error.message.includes('Pokemon')
         ? res.status(404).send({ message: 'Pokemon no encontrado' })
         :res.status(500).send(error.message);
     }

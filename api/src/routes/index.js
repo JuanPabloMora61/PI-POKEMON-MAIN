@@ -18,11 +18,11 @@ router.use(morgan('dev'));
 
 router.get("/pokemon",  getAllPoke);
 
-router.get("/pokemon/:id", getPokeById);
+router.get("/pokemon/id/:id", getPokeById);
 
-router.get("/pokemon/name", getPokeByName);
+router.get("/pokemon/name/:name", getPokeByName);
 
-router.post("/pokemon", postPoke);
+router.post("/post", postPoke);
 
 router.get("/types", getAllTypes);
 

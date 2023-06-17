@@ -5,11 +5,11 @@ const getPokeById = async (req,res) => {
     try {
         const { id } = req.params;
         const { data } = await axios.get(`${URL}/${id}`)
+        
 
         if (!data.name) throw new Error(`ID: ${id} Not found`)
 
-
-        const pokemon = {
+        const pokemon = [{
             id: data.id,
             name: data.name,
             imagen: data.sprites.front_default,
@@ -19,7 +19,10 @@ const getPokeById = async (req,res) => {
             velocidad: data.stats[5].base_stat,
             altura: data.height,
             peso: data.weight,
-        };
+            types: data.types.map(t => t.type.name)
+        }];
+
+        
 
         return res.status(200).json(pokemon);
 
