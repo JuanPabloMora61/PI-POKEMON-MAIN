@@ -7,11 +7,12 @@ const getPokeByName = async (req, res) => {
         const { name } = req.params;
         const nombreMinusculas = name.toLowerCase();
         const { data } = await axios.get(`${url}/${nombreMinusculas}`)
+        let pokemon;
 
         if (!data.name) throw new Error(`Pokemon: ${name} Not found`)
 
 
-        const pokemon = {
+        pokemon = {
             id: data.id,
             name: data.name,
             imagen: data.sprites.front_default,
