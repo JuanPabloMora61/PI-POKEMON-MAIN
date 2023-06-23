@@ -1,13 +1,14 @@
 const axios = require('axios')
 
 const getPokeByName = async (req, res) => {
-    console.log(req.query);
     try {
         const url = 'https://pokeapi.co/api/v2/pokemon'
         const { name } = req.params;
         const nombreMinusculas = name.toLowerCase();
         const { data } = await axios.get(`${url}/${nombreMinusculas}`)
         let pokemon;
+
+        
 
         if (!data.name) throw new Error(`Pokemon: ${name} Not found`)
 
@@ -22,6 +23,7 @@ const getPokeByName = async (req, res) => {
             velocidad: data.stats[5].base_stat,
             altura: data.height,
             peso: data.weight,
+            types: data.types.map(t => t.type.name)
         };
 
         return res.status(200).json(pokemon);
@@ -29,7 +31,7 @@ const getPokeByName = async (req, res) => {
 
     } catch (error) {
         error.message.includes('Pokemon')
-        ? res.status(404).send({ message: 'Pokemon no encontrado' })
+        ? res.status(404).send(error.message)
         :res.status(500).send(error.message);
     }
 }

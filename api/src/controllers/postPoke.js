@@ -8,7 +8,7 @@ try {
 
    
    const newPokemon = await Pokemon.create ({
-    name,
+    name: name,
     imagen,
     vida,
     ataque,
