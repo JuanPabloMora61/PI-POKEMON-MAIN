@@ -1,0 +1,33 @@
+.contenedorNav{
+    position: sticky;
+    top: 0px;
+    background-color: rgb(17, 17, 76);
+    z-index: 100;
+    height: 7vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedorSearch, .contenedorBoton{
+    width: 50%;
+}
+
+.contenedorBoton{
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonNav{
+    background: none;
+    border: none;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.linkNav{
+    text-decoration: none;
+    color: aliceblue;
+}
+

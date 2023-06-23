@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 60%;  
+}
+
+.nameContainer{
+    height: 300px;
+    width: 100%;
+    background-image: url('../../../public/PokemonName.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.catchBtn{
+    width: 150px;
+    height: 35px;
+    
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(17, 17, 76);
+    transition: .5s;
+}
+
+.catchBtn:hover{
+    cursor: pointer;
+    scale: 1.1;
+
+}
+
+.linkCatch{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 800;
+    color: white;
+}

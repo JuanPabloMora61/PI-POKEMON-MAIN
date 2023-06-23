@@ -1,0 +1,55 @@
+.container{
+    padding: 20px;
+    
+
+    overflow: hidden;
+
+    background-image: url('../../../public/LandingBG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    min-height: 93vh;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonsTxt{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.buttonPage{
+    margin: 3px;
+    width: 23px;
+    padding: 0;
+
+    text-align: center;
+    background: rgba(0, 0, 255, 0.327);
+    border: none;
+
+    color: rgb(255, 255, 255);
+}
+
+.buttonPage:disabled {
+    background: rgb(0, 0, 255);
+}
+
+.filterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

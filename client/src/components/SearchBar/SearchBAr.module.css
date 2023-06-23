@@ -1,0 +1,31 @@
+.contenedorBarra{
+    padding: 20px;
+}
+
+.inputSearch{
+    width: 40%;
+    height: 30px;
+    background-color: slategray;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.buttonSearch{
+    height: 30px;
+    
+    border: none;
+    border-left: 2px solid rgb(38, 44, 49);
+    background-color: slategray;
+    color: rgb(254, 254, 254);
+    cursor: pointer;
+}
+.buttonReset{
+    height: 30px;
+    
+    border: none;
+    border-left: 2px solid rgb(38, 44, 49);
+    background-color: slategray;
+    border-radius: 0 5px 5px 0;
+    color: rgb(254, 254, 254);
+    cursor: pointer;
+}

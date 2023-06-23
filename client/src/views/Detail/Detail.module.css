@@ -1,0 +1,234 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../../../public/LandingBG.png');
+    background-size: cover;
+
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.pokedexContainer{
+    display: grid;
+    grid-template: repeat(20, 5%) / repeat(20, 5%) ;
+
+    width: 500px;
+    height: 400px;
+
+    background-image: url('../../../public/pokedexDetalle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pokeName{
+    grid-area: 6 / 2 / 9 / 10;
+
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.pokeImg{
+    grid-area: 9 / 3 / 9 / 10 ;
+    height: 150px;
+}
+
+.statsContainer{
+    grid-area: 6 / 13 / 14 / 20;
+
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr) ;
+}
+
+.pokeStats{
+    color: #2e760b;
+}
+
+.typesContainer{
+    grid-area: 13 / 14 / 17 / 20;
+
+    text-align: center;
+}
+
+
+.fire {
+    background-color: #F57D31;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.normal {
+    background-color: #AAA67F;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.fighting {
+    background-color: #C12239;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.flying {
+    background-color: #A891EC;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.ground {
+    background-color: #DEC16B;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.poison {
+    background-color: #A43E9E;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.rock {
+    background-color: #B69E31;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.bug {
+    background-color: #A7B723;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.ghost {
+    background-color: #70559B;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.steel {
+    background-color: #B7B9D0;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.water {
+    background-color: #6493EB;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.grass {
+    background-color: #74CB48;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.electric {
+    background-color: #F9CF30;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.psychic {
+    background-color: #FB5584;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.ice {
+    background-color: #9AD6DF;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.dragon {
+    background-color: #7037FF;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.dark {
+    background-color: #75574C;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.fairy {
+    background-color: #E69EAC;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.unknown {
+    background-color: #A9A7AA;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}
+
+.shadow {
+    background-color: #453F3A;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    border: 2px solid goldenrod;
+    text-transform: capitalize;
+}

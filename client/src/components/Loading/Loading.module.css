@@ -1,0 +1,17 @@
+.loader{
+    padding: 20px;
+    
+
+    overflow: hidden;
+
+    background-image: url('../../../public/loadingGif.gif');
+    background-repeat: no-repeat;
+    background-size:contain;
+
+    height: 100%;
+}
+
+.container{
+    height: 500px;
+    width: 500px;
+}
